@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText input;
     private String strAnswer;
     private TextView mesg;
+    private int intCounter;
 
 
     @Override
@@ -24,13 +25,23 @@ public class MainActivity extends AppCompatActivity {
         strAnswer = createAnswer(3);
 
     }
-
+    //按下 Guess 按鈕
     public void guess(View v){
+        intCounter++;
         String guessText = input.getText().toString();
         String result = checkAB(strAnswer,guessText);
-        mesg.append(guessText + "=>" + result + "\n");
+        mesg.append(intCounter + ". " + guessText + "=>" + result + "\n"); //累加進去
+
+        if (result.equals("3A0B")){
+            //WINNER
+        }else if(intCounter == 10){
+            //Loser
+        }
+
         //mesg.setText(guessText + ":" + result);
         //Log.v("shine",guessText);
+
+        input.setText("");  //以最後一個為主
     }
 
     static String createAnswer(int n){

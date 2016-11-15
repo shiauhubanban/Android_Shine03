@@ -67,5 +67,8 @@
         android:background="#ff0"
         android:layout_below="@id/top"
         android:layout_above="@id/bottom"
+        android:textSize="24sp"
+        android:textColor="#f00"
+        android:textStyle="bold|italic"
         />
 </RelativeLayout>
