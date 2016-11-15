@@ -71,7 +71,15 @@ public class MainActivity extends AppCompatActivity {
         mesg.setText("");
         intCounter = 0;
         strAnswer = createAnswer(3);
+    }
 
+    public void exit(View v){
+        finish(); //父類別所擁有
+    }
+
+    @Override
+    public void finish() {
+        super.finish();  //結束功能用的
     }
 
     static String createAnswer(int n){
