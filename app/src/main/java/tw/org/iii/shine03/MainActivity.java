@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private EditText input;
@@ -79,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void finish() {
+
+        //Toast.makeText(this, "再按一次", Toast.LENGTH_SHORT).show();
         super.finish();  //結束功能用的
     }
 
